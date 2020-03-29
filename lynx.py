@@ -15,7 +15,7 @@ if __name__ == '__main__':
 
     # Read the command line
     parser = argparse.ArgumentParser(description = "Simulate Lynx prefetching mechanism")
-    parser.add_argument("-j", "--filename",  required=True, help="json Lynx simulator json configuration file name")
+    parser.add_argument("-f", "--filename",  required=True, help="json Lynx simulator json configuration file name")
 
     args = parser.parse_args()
 
@@ -84,14 +84,15 @@ if __name__ == '__main__':
             current_miss  = 0
             curent_read   = 0
             state_machine = np.zeros((nb_pages_in_the_simulation, max_nb_transition, 2))
-            prediction    = np.zeros(-1)
-            state_machine_reset = 0           
+            prediction    = np.zeros(nb_predictions)
+            state_machine_reset += 1
 
     print("Total reads %s"%len(read_sequence))
     print("Total cache miss %s"%cache_miss)
     print("Total cache hit %s"%cache_hit)
     print("Total prediction miss %s"%total_miss)
     print("Total prediction hit  %s"%total_hit)
+    print("Prediction state machine has been reset %s times"%state_machine_reset)
 
     # Close the configuration json file
     jsonFile.close()

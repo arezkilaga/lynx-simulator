@@ -1,6 +1,0 @@
-{
-	"lots_of_miss_nb": 100,
-	"max_transition_nb": 10,
-        "page_predictions_nb": 2,
-	"reads": [12,34,56,77,12,34,56]
-}
