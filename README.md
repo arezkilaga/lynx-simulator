@@ -18,6 +18,6 @@ OUTPUT.json: is the configuration file output.
 
 In the main folder, run the following script in order to execute the simulation and obtain the results:
 
-lynx.py [-h] -f FILENAME
+pyhon3 lynx.py [-h] -f FILENAME
 
 FILENAME: is the configuration file created by the previous script.
